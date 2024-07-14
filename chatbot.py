@@ -1,5 +1,5 @@
 import openai
-from docx import Document
+import docx2txt
 import PyPDF2
 import tiktoken
 import mimetypes
@@ -9,8 +9,8 @@ import random
 openai.api_key = "api-key"
 
 # File paths
-job_description_file_path = "file-path-here"
-resume_file_path = "file-path-here"
+job_description_file_path = "sample-job-description.pdf"
+resume_file_path = "Stylish teaching resume.docx"
 
 # Some constants
 interviewer = "Interviewer: "
@@ -267,8 +267,6 @@ def interview_chatbot(job_description, resume):
     print("Overall points: " + str(candidate_details["Overall points"]))
 
     
-
-
 # Starting with the interview
-if _name_ == "_main_":
-    main()
+if __name__ == "__main__":
+    main()
